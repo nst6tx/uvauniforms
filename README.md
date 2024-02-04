@@ -10,5 +10,11 @@ https://www.youtube.com/watch?v=DjkwjL0DuZY&ab_channel=AliHossain
 UVA Brand colors
 https://brand.virginia.edu/design-assets/colors
 
+Uniform template temporary
+https://www.gridiron-uniforms.com/GUD/controller/controller.php?action=wwww&year=2023
+
 Old UVA uniform database
 https://www.hoosfootball.com/Uniform_Summaries_and_GamePhotos/2013_Uniform.html
+
+Grid Help
+https://mdbootstrap.com/docs/standard/extended/image-grid/
