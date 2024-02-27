@@ -11,7 +11,7 @@ UVA Brand colors
 https://brand.virginia.edu/design-assets/colors
 https://brand.virginia.edu/design-assets/athletics
 
-Uniform template temporary
+Uniform template inspiration
 https://www.gridiron-uniforms.com/GUD/controller/controller.php?action=wwww&year=2023
 
 Old UVA uniform database
