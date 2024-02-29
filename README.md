@@ -25,3 +25,6 @@ https://fonts.google.com/specimen/Roboto+Condensed?preview.text=NAME&sort=popula
 
 Photo Gallery for Reference
 https://virginiasports.com/
+
+More reference
+https://www.uniswag.com/blog/2018/4/27/new-uniforms-for-uva-football
