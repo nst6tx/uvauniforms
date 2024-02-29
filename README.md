@@ -23,11 +23,5 @@ https://mdbootstrap.com/docs/standard/extended/image-grid/
 Font for N.O.B.: Meduim 500
 https://fonts.google.com/specimen/Roboto+Condensed?preview.text=NAME&sort=popularity
 
-
-
-need white orange orange white vs jmu
-
-need blue blue blue white vs nc state and vtech
-
-Have blue blue white white vs w&m and gtech, and duke
-Have all white vs tenesse, unc, maryland, bc, lousville, and miami
+Photo Gallery for Reference
+https://virginiasports.com/
