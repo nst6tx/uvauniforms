@@ -28,3 +28,4 @@ https://virginiasports.com/
 
 More reference
 https://www.uniswag.com/blog/2018/4/27/new-uniforms-for-uva-football
+https://virginiasports.com/news/2016/08/27/virginia-football-uniforms/
