@@ -4,11 +4,18 @@ $info: #0f1937;
 $warning: #F84C1E;
 $danger: #222c4a;
 $link-color: #E57200;
+
+$dropdown-link-color: #FFFFFF;
+$dropdown-link-hover-color: $warning;
+$dropdown-link-hover-bg: $warning;
+
 $link-hover-color: #E58200;
 $navbar-brand-color: #E57200;
-$navbar-brand-hover-color: #E57200;
+$navbar-brand-hover-color: $warning;
 $emphasis-color: #E57200;
 $secondary-color: #E57200;
 $nav-link-hover-color:#E57200;
+$navbar-light-brand-hover-color: #0f1937;
+$navbar-light-hover-color: #232D4B;
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
