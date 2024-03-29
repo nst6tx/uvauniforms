@@ -23,6 +23,9 @@ https://mdbootstrap.com/docs/standard/extended/image-grid/
 Font for N.O.B.: Meduim 500
 https://fonts.google.com/specimen/Roboto+Condensed?preview.text=NAME&sort=popularity
 
+Uni template inspiration:
+https://www.houstonchronicle.com/neighborhood/article/new-texans-nike-uniforms-unveiled-with-no-real-3469088.php
+
 Photo Gallery for Reference
 https://virginiasports.com/
 
