@@ -43,3 +43,6 @@ https://news.virginia.edu/content/virginia-vintage-collection-includes-classic-l
 
 Old wordmark
 https://sportslogohistory.com/virginia-cavaliers-wordmark-logo/
+
+Helmet archive:
+http://www.nationalchamps.net/Helmet_Project/index.htm
