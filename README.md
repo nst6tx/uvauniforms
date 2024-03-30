@@ -38,5 +38,8 @@ https://virginiasports.com/news/2010/04/09/2010-football-uniform-unveiling/
 Records and Raking year by year
 https://en.wikipedia.org/wiki/2023_Virginia_Cavaliers_football_team
 
+Throwback V:
+https://news.virginia.edu/content/virginia-vintage-collection-includes-classic-looks-worn-hoos-sports-legends
+
 Old wordmark
 https://sportslogohistory.com/virginia-cavaliers-wordmark-logo/
