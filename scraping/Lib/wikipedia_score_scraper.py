@@ -27,6 +27,10 @@ def write_header(path, d, y, h, s, r):
     Func.write(header)
     Func.close()
 
+def write_overview(h,s,r):
+
+    return
+
 
 def scrape_scores(url):
     page = requests.get(url)
@@ -60,20 +64,18 @@ def scrape_scores(url):
 
     team_info = soup.find_all('td', {"class": "infobox-data"})
     #print(team_info)
-    record = team_info[1].get_text()
-    record = record.replace("–", "-")
-    # for info in team_info:
-    #     print(info.get_text())
+    # record = team_info[1].get_text()
+    # record = record.replace("–", "-")
+    record = "WRONG"
+    for info in team_info:
+        if info.get_text()[1] == "–" or info.get_text()[2] == "–":
+            record = info.get_text()
+            record = record.replace("–", "-")
+            break
 
     return headers, shedule, record
 
-def main():
-    # get URL
-    url = "https://en.wikipedia.org/wiki/1988_Virginia_Cavaliers_football_team"
-    h, s, r = scrape_scores(url)
-    #print(h)
-    #print(s)
-
+def get_needed_scores_and_headers(h,s):
     needed_h = []
     needed_s = []
     for i in range(len(h)):
@@ -83,13 +85,20 @@ def main():
             for j in range(len(s)):
                 tmp.append(s[j][i])
             needed_s.append(tmp)
+    return needed_h, needed_s
 
-    print(needed_h)
-    print(needed_s)
-    print(r)
+def main():
+    # get URL
+    # url = "https://en.wikipedia.org/wiki/1980_Virginia_Cavaliers_football_team"
+    # h, s, r = scrape_scores(url)
+    d = 198
+
     path = "../../html/1980s/"
     for i in range(10):
-        write_header(path, 198, i, needed_h, needed_s, r)
+        h,s,r = scrape_scores("https://en.wikipedia.org/wiki/" + str(d) + str(i) + "_Virginia_Cavaliers_football_team")
+        needed_h, needed_s = get_needed_scores_and_headers(h,s)
+        write_header(path, d, i, needed_h, needed_s, r)
+
 
     #write this to a file or test with print
 
