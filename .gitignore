@@ -17,7 +17,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+site-packages/
 !/scraping/Lib/wikipedia_score_scraper.py
 lib64/
 parts/
