@@ -9,18 +9,18 @@ import requests
 
 
 
-def write_header(path, d, y):
+def write_header(path, d, y, h, s, r):
     d = str(d)
     y = str(y)
     Func = open(path + d + "0s_header.html", "r")
     header = Func.readlines()
     Func.close()
-    print(header)
+    #print(header)
     for i in range(len(header)):
         if header[i] == '    <h2 class="text-center text-black mb-4">' + d + 'x Season Overview</h2>\n':
             header[i] = '    <h2 class="text-center text-black mb-4">' + d + y + ' Season Overview</h2>\n'
-        # elif header [i] == '            <h2 class="text-center text-black">198x Season Game by Game (x-x)</h2>\n':
-        #     header[i] ==
+        elif header [i] == '            <h2 class="text-center text-black">' + d + 'x Season Game by Game (x-x)</h2>\n':
+             header[i] = '            <h2 class="text-center text-black">' + d + y + ' Season Game by Game '+ r +'</h2>\n'
 
     header = ''.join(header)
     Func = open(path + d + y + ".html", "w")
@@ -57,18 +57,39 @@ def scrape_scores(url):
     for item in h:
         headers.append(item.get_text())
     #print(headers)
-    return headers, shedule
+
+    team_info = soup.find_all('td', {"class": "infobox-data"})
+    #print(team_info)
+    record = team_info[1].get_text()
+    record = record.replace("–", "-")
+    # for info in team_info:
+    #     print(info.get_text())
+
+    return headers, shedule, record
 
 def main():
     # get URL
-    url = "https://en.wikipedia.org/wiki/2023_Virginia_Cavaliers_football_team"
-    h, s = scrape_scores(url)
+    url = "https://en.wikipedia.org/wiki/1988_Virginia_Cavaliers_football_team"
+    h, s, r = scrape_scores(url)
     #print(h)
     #print(s)
 
+    needed_h = []
+    needed_s = []
+    for i in range(len(h)):
+        if h[i] == "Opponent" or h[i] == "Rank" or h[i] == "Result":
+            needed_h.append(h[i])
+            tmp = []
+            for j in range(len(s)):
+                tmp.append(s[j][i])
+            needed_s.append(tmp)
+
+    print(needed_h)
+    print(needed_s)
+    print(r)
     path = "../../html/1980s/"
     for i in range(10):
-        write_header(path, 198, i)
+        write_header(path, 198, i, needed_h, needed_s, r)
 
     #write this to a file or test with print
 
