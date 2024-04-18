@@ -18,6 +18,7 @@ downloads/
 eggs/
 .eggs/
 site-packages/
+\!wikipedia_score_scraper.py
 lib64/
 parts/
 sdist/
