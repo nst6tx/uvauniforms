@@ -15,6 +15,9 @@ def write_header(path, d, y, h, s, r):
     Func = open(path + d + "0s_header.html", "r")
     header = Func.readlines()
     Func.close()
+    Func = open("../../html/shedule.html", "r")
+    shedule = Func.readlines()
+
     #print(header)
     for i in range(len(header)):
         if header[i] == '    <h2 class="text-center text-black mb-4">' + d + 'x Season Overview</h2>\n':
@@ -25,6 +28,32 @@ def write_header(path, d, y, h, s, r):
     header = ''.join(header)
     Func = open(path + d + y + ".html", "w")
     Func.write(header)
+    Func.write("\n\n")
+    Func.write(shedule[0])
+
+    #print(h)
+    #print(s)
+    #print(shedule[7:9])
+    for i in range(4):
+        Func.write(shedule[1])
+        for j in range(i,len(s[0]), 4):
+            Func.write(shedule[2])
+            Func.write(shedule[3])
+            Func.write(shedule[4])
+            Func.write(shedule[5])
+            Func.write(shedule[6])
+            if h[1] == 'Rank':
+                Func.write('                <figcaption class="figure-caption text-center text-black fw-bold fs-6">' + s[1][j] + " Virginia " + s[0][j] + '</figcaption>\n')
+                Func.write('                <figcaption class="figure-caption text-center text-black fw-bold fs-6">' + s[2][j] + '</figcaption>\n')
+            else:
+                Func.write('                <figcaption class="figure-caption text-center text-black fw-bold fs-6">' + "Virginia " + s[0][j] + '</figcaption>\n')
+                Func.write('                <figcaption class="figure-caption text-center text-black fw-bold fs-6">' + s[1][j] + '</figcaption>\n')
+            Func.write(shedule[27])
+        Func.write(shedule[38])
+
+    Func.write(shedule[128])
+    Func.write(shedule[130])
+    Func.write(shedule[131])
     Func.close()
 
 def write_overview(h,s,r):
@@ -52,6 +81,7 @@ def scrape_scores(url):
             text = text.replace("*", "")
             text = text.replace(u'\xa0', u' ')
             text = text.replace("No. ", "#")
+            text = text.replace("–", "-")
             tmp.append(text)
         shedule.append(tmp)
     #print(shedule)
@@ -85,6 +115,12 @@ def get_needed_scores_and_headers(h,s):
             for j in range(len(s)):
                 tmp.append(s[j][i])
             needed_s.append(tmp)
+
+    for i in range(len(needed_s[0])):
+        if "at" not in needed_s[0][i] and "vs." not in needed_s[0][i]:
+            print('no vs!!!!!!!!!!!!!')
+            needed_s[0][i] = "vs. " + needed_s[0][i]
+
     return needed_h, needed_s
 
 def main():
