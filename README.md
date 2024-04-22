@@ -46,3 +46,7 @@ https://sportslogohistory.com/virginia-cavaliers-wordmark-logo/
 
 Helmet archive:
 http://www.nationalchamps.net/Helmet_Project/index.htm
+
+1994 is last manual year i did, 1993 onwards is python generated
+1930, 1929-26, 1921, all have different row name so harder to be scrape
+1917-18 do not exist in wikipedia must be done manually I assume

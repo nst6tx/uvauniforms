@@ -118,7 +118,7 @@ def get_needed_scores_and_headers(h,s):
 
     for i in range(len(needed_s[0])):
         if "at" not in needed_s[0][i] and "vs." not in needed_s[0][i]:
-            print('no vs!!!!!!!!!!!!!')
+            #print('no vs!!!!!!!!!!!!!')
             needed_s[0][i] = "vs. " + needed_s[0][i]
 
     return needed_h, needed_s
@@ -127,10 +127,10 @@ def main():
     # get URL
     # url = "https://en.wikipedia.org/wiki/1980_Virginia_Cavaliers_football_team"
     # h, s, r = scrape_scores(url)
-    d = 198
+    d = 188
 
-    path = "../../html/1980s/"
-    for i in range(10):
+    path = "../../html/" + str(d) + "0s/"
+    for i in range(8,10):
         h,s,r = scrape_scores("https://en.wikipedia.org/wiki/" + str(d) + str(i) + "_Virginia_Cavaliers_football_team")
         needed_h, needed_s = get_needed_scores_and_headers(h,s)
         write_header(path, d, i, needed_h, needed_s, r)
