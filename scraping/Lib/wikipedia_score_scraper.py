@@ -65,12 +65,8 @@ def scrape_scores(url):
     page = requests.get(url)
     # scrape webpage
     soup = BeautifulSoup(page.content, 'html.parser')
-    games = soup.find_all('tr', {"class": "CFB-schedule-row"})
-    # for game in games:
-    #     data = game.find_all("td")
-    #     tmp = data[6].get_text()
-    #     # print(tmp)
 
+    games = soup.find_all('tr', {"class": "CFB-schedule-row"})
     shedule = []
     for game in games:
         data = game.find_all("td")
@@ -105,6 +101,49 @@ def scrape_scores(url):
 
     return headers, shedule, record
 
+
+def scrape_scores_no_CFB_class(url):
+    page = requests.get(url)
+    # scrape webpage
+    soup = BeautifulSoup(page.content, 'html.parser')
+
+    table = soup.find('table', {"class": "wikitable"})
+    print(table)
+    games = table.find_all('tr')
+    shedule = []
+    for game in games:
+        data = game.find_all("td")
+        tmp = []
+        # print(len(data))
+        for i in range(len(data)):
+            text = data[i].get_text()
+            text = text.replace("*", "")
+            text = text.replace(u'\xa0', u' ')
+            text = text.replace("No. ", "#")
+            text = text.replace("–", "-")
+            tmp.append(text)
+        shedule.append(tmp)
+    # print(shedule)
+    headers = []
+    h = soup.find('table', {"class": "wikitable"})
+    h = h.find_all("th")
+    for item in h:
+        headers.append(item.get_text())
+    # print(headers)
+
+    team_info = soup.find_all('td', {"class": "infobox-data"})
+    # print(team_info)
+    # record = team_info[1].get_text()
+    # record = record.replace("–", "-")
+    record = "WRONG"
+    for info in team_info:
+        if info.get_text()[1] == "–" or info.get_text()[2] == "–":
+            record = info.get_text()
+            record = record.replace("–", "-")
+            break
+
+    return headers, shedule, record
+
 def get_needed_scores_and_headers(h,s):
     needed_h = []
     needed_s = []
@@ -127,11 +166,19 @@ def main():
     # get URL
     # url = "https://en.wikipedia.org/wiki/1980_Virginia_Cavaliers_football_team"
     # h, s, r = scrape_scores(url)
-    d = 188
+
+    #Maybe make inputable?
+    d = 192
+    CFB_class_present = True
 
     path = "../../html/" + str(d) + "0s/"
-    for i in range(8,10):
-        h,s,r = scrape_scores("https://en.wikipedia.org/wiki/" + str(d) + str(i) + "_Virginia_Cavaliers_football_team")
+    for i in range(1,2):
+        if CFB_class_present:
+            h,s,r = scrape_scores("https://en.wikipedia.org/wiki/" + str(d) + str(i) + "_Virginia_Cavaliers_football_team")
+        else:
+            h, s, r = scrape_scores_no_CFB_class("https://en.wikipedia.org/wiki/" + str(d) + str(i) + "_Virginia_Cavaliers_football_team")
+            s.pop()
+            s.pop(0)
         needed_h, needed_s = get_needed_scores_and_headers(h,s)
         write_header(path, d, i, needed_h, needed_s, r)
 
