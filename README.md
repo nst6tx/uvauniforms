@@ -53,3 +53,4 @@ https://www.helmethistory.com/virginia.html
 Missing game photos: 
     1980: At Duke, at West Virginia
     1979: at NC State, vs JMU
+    1978: vs NC State double check photo is sketchy
