@@ -58,4 +58,4 @@ Missing game photos:
     1973: at NC State, at West Virginia
     1972: at Vanderbilt
     1970: vs VMI, at W&M, also check sleve trim on both unis and socks
-    1969: Ignoring wierd outersock situation
+    1969: at Tulane, Ignoring wierd outersock situation, white at home vs VMI???
