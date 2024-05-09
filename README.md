@@ -56,4 +56,5 @@ Missing game photos:
     1978: vs NC State double check photo is sketchy
     1974: at Navy
     1973: at NC State, at West Virginia
-    1972: at Vanderbuilt
+    1972: at Vanderbilt
+    1970: vs VMI, at W&M, also check sleve trim on both unis and socks
