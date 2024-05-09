@@ -55,4 +55,5 @@ Missing game photos:
     1979: at NC State, vs JMU
     1978: vs NC State double check photo is sketchy
     1974: at Navy
-    1973: at NC State
+    1973: at NC State, at West Virginia
+    1972: at Vanderbuilt
