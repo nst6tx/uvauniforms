@@ -59,3 +59,4 @@ Missing game photos:
     1972: at Vanderbilt
     1970: vs VMI, at W&M, also check sleve trim on both unis and socks
     1969: at Tulane, Ignoring wierd outersock situation, white at home vs VMI???
+    1966: Cant tell how numbers pm white jeresy should be
