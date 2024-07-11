@@ -61,3 +61,6 @@ Missing game photos:
     1969: at Tulane, Ignoring wierd outersock situation, white at home vs VMI???
     1966: Cant tell how numbers pm white jeresy should be
     1965: vs VMI missing
+    1956: vs Wake, at Lehigh, vs Va Tech, vs Vandy, at Clemson: vs Duke odd photo of blue jersy with different number style
+          Also do not know if numbers on blue jersy are white or orange
+    1957:
