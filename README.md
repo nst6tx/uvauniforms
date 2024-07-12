@@ -65,3 +65,4 @@ Missing game photos:
           Also do not know if numbers on blue jersy are white or orange
     1955: Hard to tell colors
     1954: ^
+    1950: vs GW, at WVU, at Citadek
