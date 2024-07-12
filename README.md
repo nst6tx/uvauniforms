@@ -63,4 +63,5 @@ Missing game photos:
     1965: vs VMI missing
     1956: vs Wake, at Lehigh, vs Va Tech, vs Vandy, at Clemson: vs Duke odd photo of blue jersy with different number style
           Also do not know if numbers on blue jersy are white or orange
-    1957:
+    1955: Hard to tell colors
+    1954: ^
