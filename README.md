@@ -66,3 +66,5 @@ Missing game photos:
     1955: Hard to tell colors
     1954: ^
     1950: vs GW, at WVU, at Citadek
+    1948: vs miami Ohio
+    1947: vs GW, vs VMI, vs Richmond, at WVU
