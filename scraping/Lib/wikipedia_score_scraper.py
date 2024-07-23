@@ -169,10 +169,10 @@ def main():
 
     #Maybe make inputable?
     d = 202
-    CFB_class_present = True
+    CFB_class_present = False
 
     path = "../../html/" + str(d) + "0s/"
-    for i in range(0,4):
+    for i in range(0,1):
         if CFB_class_present:
             h,s,r = scrape_scores("https://en.wikipedia.org/wiki/" + str(d) + str(i) + "_Virginia_Cavaliers_football_team")
         else:
