@@ -82,7 +82,26 @@ def scrape_scores(url):
         shedule.append(tmp)
     #print(shedule)
     headers = []
-    h = soup.find('table', {"class": "wikitable"})
+    h = soup.find_all('table', {"class": "wikitable"})
+    table_guess = h[0]
+    for table in h:
+        for item in table:
+            #print(item.get_text())
+            if 'Date' in item.get_text():
+                table_guess = item
+                break
+
+
+    # #print(wrong_table)
+    # if wrong_table:
+    #     h = h[1]
+    # else:
+    #     h = h[0]
+
+    h = table_guess
+    # for item in h:
+    #     print(h.get_text())
+
     h = h.find_all("th")
     for item in h:
         headers.append(item.get_text())
@@ -155,6 +174,8 @@ def get_needed_scores_and_headers(h,s):
                 tmp.append(s[j][i])
             needed_s.append(tmp)
 
+    #print(needed_h)
+
     for i in range(len(needed_s[0])):
         if "at" not in needed_s[0][i] and "vs." not in needed_s[0][i]:
             #print('no vs!!!!!!!!!!!!!')
@@ -168,17 +189,18 @@ def main():
     # h, s, r = scrape_scores(url)
 
     #Maybe make inputable?
-    d = 202
-    CFB_class_present = False
+    d = 201
+    CFB_class_present = True
 
     path = "../../html/" + str(d) + "0s/"
-    for i in range(0,1):
+    for i in range(2,10):
         if CFB_class_present:
             h,s,r = scrape_scores("https://en.wikipedia.org/wiki/" + str(d) + str(i) + "_Virginia_Cavaliers_football_team")
         else:
             h, s, r = scrape_scores_no_CFB_class("https://en.wikipedia.org/wiki/" + str(d) + str(i) + "_Virginia_Cavaliers_football_team")
             s.pop()
             s.pop(0)
+
         needed_h, needed_s = get_needed_scores_and_headers(h,s)
         write_header(path, d, i, needed_h, needed_s, r)
 

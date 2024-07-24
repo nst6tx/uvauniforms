@@ -50,6 +50,8 @@ https://www.helmethistory.com/virginia.html
 
 1994 is last manual year i did, 1993 onwards is python generated
 
+2019-2006 is old templates
+
 Missing game photos: 
     1980: At Duke, at West Virginia
     1979: at NC State, vs JMU
