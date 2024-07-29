@@ -52,6 +52,8 @@ https://www.helmethistory.com/virginia.html
 
 2019-2006 is old templates
 
+2013-2015 has sock inconsitencies, could make gif later but just use most common one for now
+
 Missing game photos: 
     1980: At Duke, at West Virginia
     1979: at NC State, vs JMU
