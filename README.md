@@ -50,7 +50,7 @@ https://www.helmethistory.com/virginia.html
 
 1994 is last manual year i did, 1993 onwards is python generated
 
-2019-2006 is old templates
+2009-2006 is old templates
 
 2013-2015 has sock inconsitencies, could make gif later but just use most common one for now
 
